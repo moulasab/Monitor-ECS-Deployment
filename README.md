@@ -1,6 +1,7 @@
 # Monitor-ECS-Deployment
-Notify whenever ECS deployment get succussed and failed via slack channel or email
+Implement monitor service for ECS Deployment, as part of monitor service implemented slack notification whenever Service deployed with latest image in ECS 
 
-Main scope of this repo is to create notification for ECS Deployment
-
-so what happens if deployment gets fails
+Implementaion:
+1) Create CloudWatch Event Rule for ECS service All Events 
+2) Select Lambda Function in Add Target while creating CloudWatch event Rule in the above step
+3) Create Lambda fucntion to Notify Slack channel and mentioned code in the python script
